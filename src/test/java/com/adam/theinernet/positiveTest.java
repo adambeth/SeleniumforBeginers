@@ -5,20 +5,19 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.AfterTest;
-import org.testng.annotations.BeforeTest;
+import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
 @Test
 public class positiveTest {
-    private WebDriver driver;
-    @BeforeTest
-    public void startBrowser(){
+    WebDriver driver;
+    @BeforeClass
+    public void startChrome(){
         WebDriverManager.chromedriver().setup();
         driver = new ChromeDriver();
 
-
     }
-    @Test
+
     public void loginTest(){
         String url = "http://the-internet.herokuapp.com/login";
         driver.get(url);
