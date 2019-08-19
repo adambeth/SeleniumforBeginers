@@ -17,14 +17,16 @@ public class positiveTest {
 
     @BeforeTest
     public void setupClass() {
+
         driver = driverFactory.driverSelect("chrome");
+        String url = "http://the-internet.herokuapp.com/login";
+        driver.get(url);
+        driver.manage().window().maximize();
+
     }
     @Test
     public void loginTest(){
 
-        String url = "http://the-internet.herokuapp.com/login";
-        driver.get(url);
-        driver.manage().window().maximize();
         driver.findElement(By.xpath("/html//input[@id='username']")).sendKeys("adam");
         driver.findElement(By.xpath("/html//input[@id='password']")).sendKeys("Password");
         driver.findElement(By.xpath("//form[@id='login']/button[@class='radius']")).click();
