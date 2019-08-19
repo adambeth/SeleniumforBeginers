@@ -15,10 +15,12 @@ public class positiveTest {
 
     private driverFactory driverFactory = new driverFactory();
 
-    @BeforeTest
-    public void setupClass() {
 
-        driver = driverFactory.driverSelect("chrome");
+    @BeforeTest
+    @Parameters("browser")
+    public void setupClass(String browser) {
+
+        driver = driverFactory.driverSelect(browser);
         String url = "http://the-internet.herokuapp.com/login";
         driver.get(url);
         driver.manage().window().maximize();
