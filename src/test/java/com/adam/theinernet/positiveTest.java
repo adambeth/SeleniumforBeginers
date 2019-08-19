@@ -1,25 +1,25 @@
 package com.adam.theinernet;
 
+import com.google.gson.internal.bind.util.ISO8601Utils;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.testng.annotations.AfterTest;
-import org.testng.annotations.BeforeClass;
-import org.testng.annotations.BeforeTest;
-import org.testng.annotations.Test;
+import org.testng.annotations.*;
+import com.adam.workers.driverFactory;
 
-@Test
+
 public class positiveTest {
 
     private WebDriver driver;
 
-    @BeforeClass
-    public void setupClass() {
-        WebDriverManager.chromedriver().setup();
-        driver = new ChromeDriver();
-    }
+    private driverFactory driverFactory = new driverFactory();
 
+    @BeforeTest
+    public void setupClass() {
+        driver = driverFactory.driverSelect("chrome");
+    }
+    @Test
     public void loginTest(){
 
         String url = "http://the-internet.herokuapp.com/login";
