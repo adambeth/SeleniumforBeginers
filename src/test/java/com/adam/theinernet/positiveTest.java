@@ -1,10 +1,7 @@
 package com.adam.theinernet;
 
-import com.google.gson.internal.bind.util.ISO8601Utils;
-import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.*;
 import com.adam.workers.driverFactory;
 
@@ -19,6 +16,7 @@ public class positiveTest {
     @BeforeTest
     @Parameters("browser")
     public void setupClass(String browser) {
+   
 
         driver = driverFactory.driverSelect(browser);
         String url = "http://the-internet.herokuapp.com/login";
