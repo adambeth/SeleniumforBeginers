@@ -25,7 +25,8 @@ public class driverFactory {
                 WebDriverManager.edgedriver().setup();
                 driver = new EdgeDriver();
                 break;
-
+            default:
+                throw new IllegalStateException("Unexpected value: " + browser.toLowerCase());
         }
         return driver;
 
