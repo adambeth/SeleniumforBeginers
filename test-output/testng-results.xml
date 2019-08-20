@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="0" total="2" passed="2">
+  <reporter-output>
+  </reporter-output>
+  <suite name="BrowserTest" duration-ms="26481" started-at="2019-08-20T14:25:55Z" finished-at="2019-08-20T14:26:21Z">
+    <groups>
+    </groups>
+    <test name="Run Chrome tests" duration-ms="8308" started-at="2019-08-20T14:25:55Z" finished-at="2019-08-20T14:26:03Z">
+      <class name="com.adam.theinernet.positiveTest">
+        <test-method status="PASS" signature="setupClass(java.lang.String)[pri:0, instance:com.adam.theinernet.positiveTest@6a41eaa2]" name="setupClass" is-config="true" duration-ms="7284" started-at="2019-08-20T14:25:55Z" finished-at="2019-08-20T14:26:02Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setupClass -->
+        <test-method status="PASS" signature="loginTest()[pri:0, instance:com.adam.theinernet.positiveTest@6a41eaa2]" name="loginTest" duration-ms="879" started-at="2019-08-20T14:26:02Z" finished-at="2019-08-20T14:26:03Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loginTest -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.adam.theinernet.positiveTest@6a41eaa2]" name="tearDown" is-config="true" duration-ms="129" started-at="2019-08-20T14:26:03Z" finished-at="2019-08-20T14:26:03Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- com.adam.theinernet.positiveTest -->
+    </test> <!-- Run Chrome tests -->
+    <test name="Run FireFox tests" duration-ms="13156" started-at="2019-08-20T14:26:08Z" finished-at="2019-08-20T14:26:21Z">
+      <class name="com.adam.theinernet.positiveTest">
+        <test-method status="PASS" signature="setupClass(java.lang.String)[pri:0, instance:com.adam.theinernet.positiveTest@59ec2012]" name="setupClass" is-config="true" duration-ms="10665" started-at="2019-08-20T14:26:08Z" finished-at="2019-08-20T14:26:19Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[firefox]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setupClass -->
+        <test-method status="PASS" signature="loginTest()[pri:0, instance:com.adam.theinernet.positiveTest@59ec2012]" name="loginTest" duration-ms="864" started-at="2019-08-20T14:26:19Z" finished-at="2019-08-20T14:26:19Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loginTest -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.adam.theinernet.positiveTest@59ec2012]" name="tearDown" is-config="true" duration-ms="1624" started-at="2019-08-20T14:26:19Z" finished-at="2019-08-20T14:26:21Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- com.adam.theinernet.positiveTest -->
+    </test> <!-- Run FireFox tests -->
+  </suite> <!-- BrowserTest -->
+</testng-results>
