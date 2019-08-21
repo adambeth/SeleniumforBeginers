@@ -1,23 +1,25 @@
-package com.adam.theinernet;
+package com.adam.theinternet.loginTest;
 
+import com.adam.workers.driverFactory;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-import org.testng.annotations.*;
-import com.adam.workers.driverFactory;
+import org.testng.annotations.AfterTest;
+import org.testng.annotations.BeforeTest;
+import org.testng.annotations.Parameters;
+import org.testng.annotations.Test;
 
 
 public class positiveTest {
 
     private WebDriver driver;
 
-    private driverFactory driverFactory = new driverFactory();
 
 
     @BeforeTest
     @Parameters("browser")
     public void setupClass(String browser) {
-   
 
+        driverFactory driverFactory = new driverFactory();
         driver = driverFactory.driverSelect(browser);
         String url = "http://the-internet.herokuapp.com/login";
         driver.get(url);

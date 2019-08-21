@@ -1,27 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="BrowserTest">
-<!--    chrome test-->
+<suite name="BrowserTest" parallel="tests" thread-count="5">
+    <!--    chrome test-->
     <test name = "Run Chrome tests">
-<!--        <groups>-->
-<!--            <run>-->
-<!--                <include name="smoke"/>-->
-<!--            </run>-->
-<!--        </groups>-->
-        <parameter name="browser" value="chrome"/>
+        <parameter name = "browser" value = "chrome"/>
         <classes>
-            <class name="com.adam.theinernet.positiveTest">
+            <class name="positiveTest">
                 <methods>
                     <include name="loginTest"/>
                 </methods>
             </class>
         </classes>
     </test>
-<!--    firefox test-->
+    <!--    firefox test-->
     <test name = "Run FireFox tests">
         <parameter name="browser" value="firefox"/>
         <classes>
-            <class name="com.adam.theinernet.positiveTest">
+            <class name="positiveTest">
                 <methods>
                     <include name="loginTest"/>
                 </methods>
