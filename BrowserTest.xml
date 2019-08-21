@@ -5,7 +5,7 @@
     <test name = "Run Chrome tests">
         <parameter name = "browser" value = "chrome"/>
         <classes>
-            <class name="positiveTest">
+            <class name="com.adam.theinternet.loginTest.positiveTest">
                 <methods>
                     <include name="loginTest"/>
                 </methods>
@@ -14,9 +14,9 @@
     </test>
     <!--    firefox test-->
     <test name = "Run FireFox tests">
-        <parameter name="browser" value="firefox"/>
+        <parameter name="browser" value="chrome"/>
         <classes>
-            <class name="positiveTest">
+            <class name="com.adam.theinternet.loginTest.positiveTest">
                 <methods>
                     <include name="loginTest"/>
                 </methods>
